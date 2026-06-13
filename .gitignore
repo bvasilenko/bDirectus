@@ -141,3 +141,9 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# contribot artefacts (internal-only)
+.github/docs/TODO.md
+contribot.state.*.json
+contribot.config.*.json
+transcripts/
