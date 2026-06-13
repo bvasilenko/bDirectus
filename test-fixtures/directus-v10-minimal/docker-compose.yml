@@ -1,0 +1,18 @@
+services:
+  directus:
+    image: directus/directus:10
+    ports:
+      - "8055:8055"
+    environment:
+      KEY: bdirectus-local-key
+      SECRET: bdirectus-local-secret
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_PASSWORD: password
+      DB_CLIENT: sqlite3
+      DB_FILENAME: /directus/database/data.db
+      EXTENSIONS_AUTO_RELOAD: "true"
+      BDIRECTUS_COLLECTIONS: articles
+      BDIRECTUS_BINARIES: bground
+    volumes:
+      - ./database:/directus/database
+      - ./extensions:/directus/extensions
