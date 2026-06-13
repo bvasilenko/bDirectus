@@ -1,5 +1,8 @@
 # bDirectus
 
+Your content team writes in Directus: editorial items, product descriptions, regulated copy. They use AI assistants in the admin app to draft. With bDirectus installed, the same discipline checks that protect your engineers run on those drafts. A Directus filter hook fires on item create/update: bground verifies factual claims against cited evidence, bsmell flags hedged or unsupported language, banchor checks alignment to the brief. Verdicts render in a custom Directus interface alongside the item field: no leaving the admin app, no fact-check ping-pong, no after-the-fact retraction.
+
+
 Directus extension embedding the b-suite discipline runtime into the admin authoring UI.
 
 ## Install
