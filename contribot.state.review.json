@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "issueIid": 26,
+  "sessionId": "019ec1c4-a4b5-7e41-9f17-8e49fdbdcfbb",
+  "turnaround": 0,
+  "completedStepIds": [
+    1,
+    2,
+    3
+  ],
+  "startedAt": "2026-06-13T16:15:49.889Z",
+  "delegationsExecuted": [],
+  "delegateFindings": {}
+}

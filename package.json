@@ -1,0 +1,61 @@
+{
+  "name": "@booga/bdirectus",
+  "version": "0.1.0",
+  "description": "Directus extension embedding the b-suite discipline runtime into the admin authoring UI.",
+  "license": "MIT",
+  "repository": "github:bvasilenko/bDirectus",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "directus-extension build",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@directus/extensions-sdk": "^11"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "11.0.10",
+    "@eslint/js": "^9.30.1",
+    "@types/node": "^22.15.32",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "eslint": "^9.30.1",
+    "eslint-plugin-vue": "^10.9.2",
+    "typescript": "5.8.3",
+    "typescript-eslint": "^8.35.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.17",
+    "vue-eslint-parser": "^10.4.1",
+    "vue-tsc": "^2.2.10"
+  },
+  "directus:extension": {
+    "type": "bundle",
+    "path": {
+      "app": "dist/app.js",
+      "api": "dist/api.js"
+    },
+    "host": "^10.0.0 || ^11.0.0",
+    "sandbox": {
+      "enabled": false
+    },
+    "entries": [
+      {
+        "type": "hook",
+        "name": "bdirectus-hook",
+        "source": "src/hook/index.ts"
+      },
+      {
+        "type": "interface",
+        "name": "bsuite-directive",
+        "source": "src/interface/index.ts"
+      }
+    ]
+  }
+}
